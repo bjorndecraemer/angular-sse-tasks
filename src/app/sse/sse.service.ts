@@ -8,7 +8,7 @@ export class SseService {
 
   constructor() { }
 
-  newObservable<R>(path: string): Observable<R> {
+  newHeaterConnection<R>(path: string): Observable<R> {
     return new Observable(observer => {
       const eventSource = new EventSource(path);
       eventSource.onmessage = event => {

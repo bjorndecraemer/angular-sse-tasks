@@ -27,7 +27,7 @@ export class TodoComponent implements OnInit {
     //   };
     // }
     this.sseService
-      .newObservable("http://localhost:8080/sse")
+      .newHeaterConnection("http://localhost:8080/sse")
       .subscribe((watcherEvent) => console.log(watcherEvent), error => console.log(error), () => console.log("COMPLETE"));
   }
 
